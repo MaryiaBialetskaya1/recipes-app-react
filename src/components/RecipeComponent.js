@@ -1,4 +1,4 @@
-const RecipeBox = ({
+const RecipeComponent = ({
   key,
   title,
   image,
@@ -12,14 +12,14 @@ const RecipeBox = ({
       <h2>{title}</h2>
       <img src={image} alt="recipe pic" />
       <h4>{calories.toFixed()} calories</h4>
-      {/* <ul className="list">
+      <ul>
         {ingredients.map((ingredient) => (
           <li>{ingredient}</li>
         ))}
-      </ul> */}
+      </ul>
       <h4>{servings} servings</h4>
     </div>
   );
 };
 
-export default RecipeBox;
+export default RecipeComponent;

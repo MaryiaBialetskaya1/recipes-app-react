@@ -12,7 +12,7 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
-import RecipeBox from "./components/RecipeComponent";
+import RecipeComponent from "./components/RecipeComponent";
 
 export default function App() {
   // const [isShown, setIsShown] = useState(false);
@@ -37,20 +37,6 @@ export default function App() {
   });
 
   const prevSearch = prevSearchIdRef.current;
-
-  const fetchRecipes = async () => {
-    // if (prevSearch !== query) {
-    // }
-    const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${MY_ID}&app_key=${MY_KEY}`
-    );
-    const data = await response.json();
-    setRecipes(data.hits);
-    console.log(response);
-    console.log(data);
-    console.log(data.hits);
-    console.log(currentPagination);
-  };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -81,6 +67,19 @@ export default function App() {
   };
 
   useEffect(() => {
+    const fetchRecipes = async () => {
+      // if (prevSearch !== query) {
+      // }
+      const response = await fetch(
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${MY_ID}&app_key=${MY_KEY}`
+      );
+      const data = await response.json();
+      setRecipes(data.hits);
+      console.log(response);
+      console.log(data);
+      console.log(data.hits);
+      console.log(currentPagination);
+    };
     fetchRecipes();
   }, [query, pagination]);
 
@@ -120,14 +119,12 @@ export default function App() {
           <div>
             <div>
               {recipes.map((recipe) => (
-                <RecipeBox
+                <RecipeComponent
                   key={recipe.recipe.uri}
                   title={recipe.recipe.label}
                   image={recipe.recipe.image}
                   calories={recipe.recipe.calories}
-                  ingredients={recipe.recipe.ingredients}
-                  link={recipe.recipe.url}
-                  source={recipe.recipe.source}
+                  ingredients={recipe.recipe.ingredientLines}
                   healthLabels={recipe.recipe.healthLabels}
                   servings={recipe.recipe.yield}
                 />
