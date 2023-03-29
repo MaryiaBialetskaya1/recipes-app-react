@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Modal from "./Modal";
 import ListComponent from "./ListComponent";
 
 const RecipeComponent = ({
@@ -15,6 +16,15 @@ const RecipeComponent = ({
   const handleClick = (event) => {
     setIsShown((current) => !current);
   };
+
+  const [openModal, setOpenModal] = useState(false);
+  const open = () => {
+    setOpenModal(true);
+  };
+  const close = () => {
+    setOpenModal(false);
+  };
+
   return (
     <div className="recipe-card">
       <aside>
@@ -49,6 +59,8 @@ const RecipeComponent = ({
           {ingredients}
         </p> */}
       </article>
+      <div onClick={open}>Open</div>
+      {openModal && <Modal close={close} />}
       <div>
         <button className="button" onClick={handleClick}>
           See Ingredients
