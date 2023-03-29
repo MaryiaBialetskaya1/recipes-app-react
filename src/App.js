@@ -1,5 +1,4 @@
 import "./App.css";
-import { ListComponent } from "./components/ListComponent";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -15,11 +14,6 @@ import {
 import RecipeComponent from "./components/RecipeComponent";
 
 export default function App() {
-  // const [isShown, setIsShown] = useState(false);
-  // const handleClick = (event) => {
-  //   setIsShown((current) => !current);
-  // };
-
   const MY_ID = "ef8cbc86";
   const MY_KEY = "c73ad37c996173138fd8f95ab677f997";
 
@@ -120,7 +114,6 @@ export default function App() {
             <div>
               {recipes.map((recipe) => (
                 <RecipeComponent
-                  key={recipe.recipe.uri}
                   title={recipe.recipe.label}
                   image={recipe.recipe.image}
                   calories={recipe.recipe.calories}
@@ -156,10 +149,5 @@ export default function App() {
         <h2>Sorry !! No Recipes Found</h2>
       )}
     </>
-
-    // <div>
-    //   <button onClick={handleClick}>Click</button>
-    //   {isShown && <ListComponent />}
-    // </div>
   );
 }

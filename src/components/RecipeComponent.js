@@ -2,7 +2,6 @@ import { useState } from "react";
 import ListComponent from "./ListComponent";
 
 const RecipeComponent = ({
-  key,
   title,
   image,
   calories,
@@ -23,7 +22,7 @@ const RecipeComponent = ({
       </aside>
       <article>
         <h2 className="title">{title}</h2>
-        <h3 className="mealtype">{mealtype}</h3>
+        <h3 className="mealtype">Good for: {mealtype}</h3>
         <ul>
           <li>
             <span className="icon icon-users"></span>
