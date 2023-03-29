@@ -53,20 +53,17 @@ const RecipeComponent = ({
         </ul>
 
         <p className="paragraph">{cuisineType} cuisine</p>
-
-        {/* <p className="ingredients">
-          <span>Ingredients:&nbsp;</span>
-          {ingredients}
-        </p> */}
       </article>
-      <div onClick={open}>Open</div>
-      {openModal && <Modal close={close} />}
       <div>
-        <button className="button" onClick={handleClick}>
+        <button className="button" onClick={open}>
           See Ingredients
         </button>
-        {isShown && <ListComponent ingredients={ingredients} />}
+        {openModal && <Modal close={close} ingredients={ingredients} />}
       </div>
+      {/* <button className="button" onClick={handleClick}>
+        See Ingredients
+      </button>
+      {isShown && <ListComponent ingredients={ingredients} />} */}
     </div>
   );
 };

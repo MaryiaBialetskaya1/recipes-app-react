@@ -1,18 +1,28 @@
-const Modal = ({ close }) => {
+const Modal = ({ close, ingredients }) => {
   return (
     <div className="overlay">
       <form className="form">
-        <div className="modalHeader">
-          <h3>Modal</h3>
-          <button className="closeButton" onClick={close}>
-            &times;
-          </button>
+        <div class="outer">
+          <div class="inner" onClick={close}>
+            <label>Back</label>
+          </div>
         </div>
         <div className="modalBody">
-          <p>This is Modal Body</p>
+          <div className="listContainer">
+            <p className="ingredients title">
+              <span>Ingredients:&nbsp;</span>
+            </p>
+            <ul className="list">
+              {ingredients.map((ingredient) => (
+                <li className="listItem">{ingredient}</li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="footer">
-          <button onClick={close}>Cancel</button>
+          <button className="modalButton" onClick={close}>
+            Cancel
+          </button>
         </div>
       </form>
     </div>
