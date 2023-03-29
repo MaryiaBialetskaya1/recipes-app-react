@@ -1,27 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 body {
-  background: linear-gradient(0.25turn, #19d3d1 5%, #57abf2, #57abf2);
+  /* background: linear-gradient(0.25turn, #19d3d1 5%, #57abf2, #57abf2); */
+  background: #faf7f2;
+  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-}
-.AddButton {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  background-color: gray;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 10px;
-}
-.Component {
-  color: white;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  background-color: darkblue;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 10px;
 }
 .recipe-card {
   background: #fff;
@@ -29,6 +12,7 @@ body {
   width: 90%;
   max-width: 496px;
   border-radius: 5px;
+  box-shadow: 0px 0px 30px 2px #000;
 }
 aside {
   position: relative;
@@ -53,6 +37,9 @@ li {
   display: inline-block;
   margin-left: 1em;
   line-height: 1em;
+}
+li:first-child {
+  margin-left: 0;
 }
 .icon {
   vertical-align: bottom;
@@ -95,26 +82,29 @@ span:nth-of-type(2) {
   vertical-align: middle;
   color: #838689;
 }
-h2,
-h3 {
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin: 0;
   font-weight: 300;
-}
-
-h2 {
   font-size: em(28);
   color: #222222;
 }
 
-h3 {
-  font-size: em(15);
-  color: #838689;
+.mealtype {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
 }
-p {
-  margin: 1.25em 0;
-  font-size: em(13);
-  font-weight: 400;
-  color: #222222;
+.paragraph {
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
 }
 span {
   font-weight: 700;
@@ -122,4 +112,21 @@ span {
 }
 .ingredients {
   margin: 2em 0 0.5em;
+}
+.button {
+  display: block;
+  background: #ef3e36;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 10px;
+  transition: 250ms;
+  width: 100%;
+  border: none;
+}
+.button:hover {
+  background: #17bebb;
+  transition: 250ms;
 }

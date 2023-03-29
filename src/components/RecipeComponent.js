@@ -22,8 +22,8 @@ const RecipeComponent = ({
         <img src={image} className="cardImage" alt="recipe pic" />
       </aside>
       <article>
-        <h2>{title}</h2>
-        <h3>{mealtype}</h3>
+        <h2 className="title">{title}</h2>
+        <h3 className="mealtype">{mealtype}</h3>
         <ul>
           <li>
             <span className="icon icon-users"></span>
@@ -43,7 +43,7 @@ const RecipeComponent = ({
           </li>
         </ul>
 
-        <p>{cuisineType} cuisine</p>
+        <p className="paragraph">{cuisineType} cuisine</p>
 
         {/* <p className="ingredients">
           <span>Ingredients:&nbsp;</span>
@@ -51,7 +51,9 @@ const RecipeComponent = ({
         </p> */}
       </article>
       <div>
-        <button onClick={handleClick}>See Ingredients</button>
+        <button className="button" onClick={handleClick}>
+          See Ingredients
+        </button>
         {isShown && <ListComponent ingredients={ingredients} />}
       </div>
     </div>
