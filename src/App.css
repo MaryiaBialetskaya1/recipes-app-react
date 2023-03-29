@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+body {
+  background: linear-gradient(0.25turn, #19d3d1 5%, #57abf2, #57abf2);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
 .AddButton {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +13,6 @@
   padding: 10px;
   margin: 10px;
 }
-
 .Component {
   color: white;
   font-size: 15px;
@@ -18,41 +23,103 @@
   padding: 10px;
   margin: 10px;
 }
-/* .App {
-  text-align: center;
+.recipe-card {
+  background: #fff;
+  margin: 4em auto;
+  width: 90%;
+  max-width: 496px;
+  border-radius: 5px;
+}
+aside {
+  position: relative;
+}
+.cardImage {
+  border-radius: 5px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: bottom;
+}
+article {
+  padding: 1.25em 1.5em;
+}
+ul {
+  list-style: none;
+  margin: 0.5em 0 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin-left: 1em;
+  line-height: 1em;
+}
+.icon {
+  vertical-align: bottom;
+  display: inline;
+  display: inline-block;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg);
+  background-repeat: no-repeat;
+}
+.icon-calories,
+.icon-calories\:regular {
+  background-position: 0 0;
+  width: 16px;
+  height: 19px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon-clock,
+.icon-clock\:regular {
+  background-position: 0 -19px;
+  width: 20px;
+  height: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon-level,
+.icon-level\:regular {
+  background-position: 0 -39px;
+  width: 16px;
+  height: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon-users,
+.icon-users\:regular {
+  background-position: 0 -84px;
+  width: 18px;
+  height: 18px;
+}
+span:nth-of-type(2) {
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  font-weight: 300;
+  vertical-align: middle;
+  color: #838689;
+}
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: em(28);
+  color: #222222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+h3 {
+  font-size: em(15);
+  color: #838689;
+}
+p {
+  margin: 1.25em 0;
+  font-size: em(13);
+  font-weight: 400;
+  color: #222222;
+}
+span {
+  font-weight: 700;
+  color: #000000;
+}
+.ingredients {
+  margin: 2em 0 0.5em;
+}

@@ -1,11 +1,15 @@
 import React from "react";
 
-const ListComponent = (props) => {
+const ListComponent = ({ ingredients }) => {
   return (
-    <div className="Component">
-      <h1>{props.text}</h1>
+    <div>
+      <ul>
+        {ingredients.map((ingredient) => (
+          <li>{ingredient}</li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export { ListComponent };
+export default ListComponent;

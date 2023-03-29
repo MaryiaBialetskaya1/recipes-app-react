@@ -87,7 +87,7 @@ export default function App() {
     <>
       <Navbar bg="black" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/home">Recipes for the Ages</Navbar.Brand>
+          <Navbar.Brand href="/home">Find Your Recipe</Navbar.Brand>
           <Navbar.Toggle
             className="navbar-toggle"
             aria-controls="navbarScroll"
@@ -125,8 +125,10 @@ export default function App() {
                   image={recipe.recipe.image}
                   calories={recipe.recipe.calories}
                   ingredients={recipe.recipe.ingredientLines}
-                  healthLabels={recipe.recipe.healthLabels}
+                  cuisineType={recipe.recipe.cuisineType}
+                  mealtype={recipe.recipe.mealType}
                   servings={recipe.recipe.yield}
+                  totalTime={recipe.recipe.totalTime}
                 />
               ))}
             </div>
