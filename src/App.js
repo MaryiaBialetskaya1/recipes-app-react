@@ -4,7 +4,6 @@ import { ListComponent } from "./components/ListComponent";
 
 export default function App() {
   const [isShown, setIsShown] = useState(false);
-
   const handleClick = (event) => {
     setIsShown((current) => !current);
   };
