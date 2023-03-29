@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Modal from "./Modal";
-import ListComponent from "./ListComponent";
 
 const RecipeComponent = ({
   title,
@@ -60,10 +59,6 @@ const RecipeComponent = ({
         </button>
         {openModal && <Modal close={close} ingredients={ingredients} />}
       </div>
-      {/* <button className="button" onClick={handleClick}>
-        See Ingredients
-      </button>
-      {isShown && <ListComponent ingredients={ingredients} />} */}
     </div>
   );
 };
