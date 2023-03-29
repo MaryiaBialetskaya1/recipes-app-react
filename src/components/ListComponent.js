@@ -2,13 +2,13 @@ import React from "react";
 
 const ListComponent = ({ ingredients }) => {
   return (
-    <div>
-      <p className="ingredients">
+    <div className="listContainer">
+      <p className="ingredients title">
         <span>Ingredients:&nbsp;</span>
       </p>
-      <ul>
+      <ul className="list">
         {ingredients.map((ingredient) => (
-          <li>{ingredient}</li>
+          <li className="listItem">{ingredient}</li>
         ))}
       </ul>
     </div>

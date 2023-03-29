@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 body {
   background: #faf7f2;
-  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+  /* background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png); */
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
 }
@@ -37,9 +37,6 @@ li {
   margin-left: 1em;
   line-height: 1em;
 }
-li:first-child {
-  margin-left: 0;
-}
 .icon {
   vertical-align: bottom;
   display: inline;
@@ -53,21 +50,18 @@ li:first-child {
   width: 16px;
   height: 19px;
 }
-
 .icon-clock,
 .icon-clock\:regular {
   background-position: 0 -19px;
   width: 20px;
   height: 20px;
 }
-
 .icon-level,
 .icon-level\:regular {
   background-position: 0 -39px;
   width: 16px;
   height: 19px;
 }
-
 .icon-users,
 .icon-users\:regular {
   background-position: 0 -84px;
@@ -89,16 +83,7 @@ span:nth-of-type(2) {
   font-size: em(28);
   color: #222222;
 }
-
 .mealtype {
-  display: block;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  margin: 15px 0 0;
-  text-transform: uppercase;
-}
-.paragraph {
-  text-align: center;
   display: block;
   font-size: 12px;
   letter-spacing: 0.5px;
@@ -108,9 +93,6 @@ span:nth-of-type(2) {
 span {
   font-weight: 700;
   color: #000000;
-}
-.ingredients {
-  margin: 2em 0 0.5em;
 }
 .button {
   display: block;
@@ -128,4 +110,29 @@ span {
 .button:hover {
   background: #17bebb;
   transition: 250ms;
+}
+.listContainer {
+  padding: 20px;
+}
+.ingredients {
+  margin: 2em 0 0.5em;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+}
+.listItem {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #838689;
+}
+.paragraph {
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
 }

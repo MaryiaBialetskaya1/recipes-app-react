@@ -81,7 +81,9 @@ export default function App() {
     <>
       <Navbar bg="black" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/home">Find Your Recipe</Navbar.Brand>
+          <Navbar.Brand href="/home" className="title">
+            Find Your Recipe
+          </Navbar.Brand>
           <Navbar.Toggle
             className="navbar-toggle"
             aria-controls="navbarScroll"
@@ -146,7 +148,7 @@ export default function App() {
           </div>
         </section>
       ) : (
-        <h2>Sorry !! No Recipes Found</h2>
+        <h2 className="title">Sorry!!! No Recipes Found. Try again later</h2>
       )}
     </>
   );
