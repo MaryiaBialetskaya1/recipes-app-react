@@ -11,11 +11,6 @@ const RecipeComponent = ({
   mealtype,
   totalTime,
 }) => {
-  const [isShown, setIsShown] = useState(false);
-  const handleClick = (event) => {
-    setIsShown((current) => !current);
-  };
-
   const [openModal, setOpenModal] = useState(false);
   const open = () => {
     setOpenModal(true);
