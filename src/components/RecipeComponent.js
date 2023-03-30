@@ -50,7 +50,6 @@ const RecipeComponent = ({
             <span>{calories.toFixed()}</span>
           </li>
         </ul>
-
         <p className="paragraph">{cuisineType} cuisine</p>
       </article>
       <div>
