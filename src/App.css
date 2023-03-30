@@ -99,7 +99,11 @@ span {
 }
 .button {
   display: block;
-  background: #ef3e36;
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
   color: #fff;
   position: relative;
   text-transform: uppercase;
@@ -305,14 +309,4 @@ label {
     padding-left: 0;
     margin-left: 0;
   }
-}
-
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
