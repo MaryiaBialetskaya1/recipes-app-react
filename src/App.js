@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar bg="black" expand="lg" variant="dark">
+      <Navbar bg="black" expand="lg" variant="dark" className="header">
         <Container fluid>
           <Navbar.Brand href="/home" className="title">
             Find Your Recipe
