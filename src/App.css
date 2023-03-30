@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 body {
   background: #faf7f2;
-  background-image: url(https://images.wallpaperscraft.com/image/single/drops_water_white_55225_300x168.jpg);
+  /* background-image: url(https://images.wallpaperscraft.com/image/single/drops_water_white_55225_300x168.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,7 +90,7 @@ span:nth-of-type(2) {
   display: block;
   font-size: 12px;
   letter-spacing: 0.5px;
-  margin: 15px 0 0;
+  margin: 15px 0;
   text-transform: uppercase;
 }
 span {
@@ -277,4 +277,32 @@ label {
 }
 .modalButton:disabled:hover {
   box-shadow: none;
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: aliceblue;
+  }
+  .ingredients {
+    margin-top: 1em;
+    margin-right: 0px;
+    margin-bottom: 0.5em;
+    margin-left: 0px;
+  }
+  .listContainer {
+    padding: 10px;
+  }
+  .list > * {
+    background: antiquewhite;
+    padding: 0.3rem;
+  }
+  .list {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
