@@ -47,7 +47,7 @@ const RecipeComponent = ({
         </ul>
         <p className="paragraph">{cuisineType} cuisine</p>
       </article>
-      <div>
+      <div className="buttonContainer">
         <button className="button" onClick={open}>
           See Ingredients
         </button>

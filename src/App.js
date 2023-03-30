@@ -1,4 +1,5 @@
 import "./App.css";
+import video from "./video.mp4";
 import { useState } from "react";
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -74,10 +75,13 @@ export default function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <video autoPlay muted loop>
+        <source src={video} type="video/mp4" />
+      </video>
       {recipes.length > 0 ? (
         <section>
           <div>
-            <div>
+            <div className="wrap">
               {recipes.map((recipe) => (
                 <RecipeComponent
                   title={recipe.recipe.label}
